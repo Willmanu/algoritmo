@@ -1,12 +1,18 @@
-array = []
+array = Array.new
 
 array = [10, 20, 80, 30, 60, 50, 110, 100, 130, 170]
 
-output = 6
+array.each_with_index do |elemento, indice|
+	puts "Elemento na posição #{indice+1}: #{elemento}"
+  end
 
-array.each do |item|
-	 if item == output
+  
+=begin
+output = 170
 
-	  puts item
-	 end
+array.each do |item, indice|
+  #if item == output
+    puts "O #{item} esta no indice #{indice + 1}"
+  #end
 end
+=end
