@@ -1,15 +1,16 @@
 array = [10, 20, 80, 30, 60, 50, 110, 100, 130, 170]
 tamanho_array = array.length
 output = 170
+
+while array[] != output
+  if array[] == output
+    
+  end
+  array[] + 1
+end
 puts tamanho_array
 
-array.each do |elemento|
-  if output == elemento
-    puts "Elemento na posição #{array[0] + 1}: #{elemento}"
-  else
-    puts "O elemento não esta posição #{array[0] + 1} da lista"
-  end
-end
+
 
 =begin
 output = 175
