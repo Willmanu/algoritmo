@@ -1,33 +1,49 @@
 array = [10, 20, 80, 30, 60, 50, 110, 100, 130, 170]
-tamanho_array = array.length
+
 output = 170
-
-while array[] != output
-  if array[] == output
-    
-  end
-  array[] + 1
-end
-puts tamanho_array
-
-
-
-=begin
-output = 175
+encontrado = false
 
 array.each_with_index do |elemento, indice|
   if output == elemento
-    puts "Elemento na posição #{indice + 1}: #{elemento}"
-  else
-    puts 'O elemento não esta na lista'
+    puts "O numero #{output} está na posição #{indice}"
+    encontrado = true
+    break
   end
 end
-=end
+
+if encontrado == false
+  puts "O numero #{output} não foi encontrado"
+end
+
+output = 175
+array.each_with_index do |elemento, indice|
+  if output == elemento
+    puts "O numero #{output} está na posição #{indice}"
+    encontrado = true
+    break
+  end
+end
+
+if encontrado == false
+  puts "O numero #{output} não foi encontrado"
+end
+  
 =begin
 
-array.each_with_index do |elemento, indice|
-  puts "Elemento na posição #{indice + 1}: #{elemento}"
-end
+O método each vai passar por todos os elementos do array, ou seja, intera por todos os
+elementos do array
+
+elemento é a variável que recebe cada numero do array
+
+with index significa -> com indice - isso significa que a cada interação, os indices de cada numero
+vão ficar na variável indice
+
+Dentro do if tem uma logica que a seguinte:
+Como o each vai passar por cada número do array e guardar dentro da variável elemento
+se o numero de saída, ou seja, o numero que se deseja ser encontrado for igual ao elemento
+vai ser impresso uma mensagem
+o break interrompe a interação do each, porque o each passa por todos os números do array se não houver
+o break, mesmo que tenha achado o numero desejado
 
 
 O método each_with_index é utilizado nesse código para iterar sobre cada elemento do array e
