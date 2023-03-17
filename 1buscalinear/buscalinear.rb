@@ -15,7 +15,9 @@ if encontrado == false
   puts "O numero #{output} não foi encontrado"
 end
 
+# teste de numero que não esta entre os elementos do array
 output = 175
+encontrado = false
 array.each_with_index do |elemento, indice|
   if output == elemento
     puts "O numero #{output} está na posição #{indice}"
@@ -27,7 +29,7 @@ end
 if encontrado == false
   puts "O numero #{output} não foi encontrado"
 end
-  
+
 =begin
 
 O método each vai passar por todos os elementos do array, ou seja, intera por todos os
