@@ -96,3 +96,15 @@ array2.each_with_index do |elemento, indice|
 end
 
 puts "O numero #{output} não foi encontrado" unless encontrado
+
+=begin
+Neste exemplo usei condicional simples de uma linha
+ele vai imprimir a mensagem se não for verdadeira a condição
+
+unless é ao contrario, por padrão a variável boolean vem como true, neste caso o unless
+diz que é falsa a variável
+
+então se encontrado for false, ou seja, não for encontrado o numero da busca vai imprimir
+na tela mensagem
+
+=end
