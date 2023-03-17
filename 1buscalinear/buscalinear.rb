@@ -1,6 +1,6 @@
 array = [10, 20, 80, 30, 60, 50, 110, 100, 130, 170]
 
-output = 170
+output = 110
 encontrado = false
 
 array.each_with_index do |elemento, indice|
@@ -65,4 +65,34 @@ Em resumo, o método each_with_index é utilizado para percorrer o array e execu
 cada elemento e seu respectivo índice. A função with_index é usada para gerar os índices em
 tempo de execução e passá-los para o bloco de código dentro do loop.
 
+             Forma correta do código pela convenção usando next ao invés de if
+
 =end
+
+array2 = [10, 20, 80, 30, 60, 50, 110, 100, 130, 170]
+
+output = 110
+encontrado = false
+
+array2.each.with_index do |elemento, indice|
+  next unless output == elemento
+
+  puts "O numero #{output} está no indice #{indice}"
+  encontrado = true
+  break
+end
+
+puts "O numero #{output} não esta neste array" unless encontrado
+
+output = 175
+encontrado = false
+
+array2.each_with_index do |elemento, indice|
+  next unless output == elemento
+
+  puts "O numero #{output} esta no indice #{indice}"
+  encontrado = true
+  break
+end
+
+puts "O numero #{output} não foi encontrado" unless encontrado
