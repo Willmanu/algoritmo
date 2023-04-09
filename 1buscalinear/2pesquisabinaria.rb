@@ -1,5 +1,18 @@
-array = [10, 20, 80, 30, 60, 50, 110, 100, 130, 170]
+=begin
 
+ A Pesquisa Binária é um algoritmo de busca eficiente que opera em listas ordenadas
+ O objetivo da Pesquisa Binária é encontrar a posição de um determinado elemento em uma lista
+ ordenada, dividindo repetidamente a lista em duas metades(por isso seu nome é binária) e
+ comparando o elemento desejado com o elemento no meio da lista
+
+  A complexidade da Pesquisa Binária é O(log n), onde n é o número de elementos na lista.
+=end
+
+array = [10, 20, 30, 50, 60, 80, 110, 130, 140, 170]
+
+primeiro_elemento = 0
+ultimo_elemento = 10
+elemento_do_meio = 80
 output = 110
 encontrado = false
 

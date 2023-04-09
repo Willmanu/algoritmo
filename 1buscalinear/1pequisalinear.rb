@@ -1,9 +1,25 @@
 =begin
                                         Liner Search
  Linear Search significa - pesquisa linear
- A Pesquisa Linear é definida como um algoritmo de busca sequencial que começa em uma extremidade
- e percorre cada elemento de uma lista até que o elemento desejado seja encontrado, caso
- contrário, a pesquisa continua até o final do conjunto de dados.
+ A Pesquisa Linear é definida como um algoritmo de busca sequencial que começa em uma
+ extremidade(0) e percorre cada elemento de uma lista até que o elemento desejado seja encontrado,
+ caso contrário, a pesquisa continua até o final do conjunto de dados (n).
+
+ (0)é a posição inicial
+ (n) é a posição final
+
+ (0) e (N) indica a complexidade de busca pelo elemento desejado
+ Por exemplo, um algoritmo que percorre uma lista de "n" elementos, e executa uma operação em
+ cada elemento, tem uma complexidade de O(n), pois o número de operações necessárias é diretamente
+ proporcional ao número de elementos na lista
+
+ 0(n) é usado para descrever um algoritmo cujo tempo de execução cresce linearmente com o tamanho
+ da entrada
+ Isso significa que, se a entrada for duplicada, o tempo necessário para executar o algoritmo
+ também será duplicado
+
+ A utilidade desta forma de pesquisa é especialmente quando a lista de elementos é relativamente
+ pequena ou quando a lista não está organizada de nenhuma maneira específica
  Exemplo:
 =end
 
@@ -25,7 +41,23 @@ if encontrado == false
 end
 
 =begin
+                         Análise de Complexidade da Pesquisa Linear:
+ O resultado é:
+ A chave 20 de procura, está dentro o indice 5
 
+ Em suma a lista não está ordenada, o código precisou ler um a um os elementos, até chegar ao
+ indice 5 e encontrar o elemento desejado.
+
+ O melhor caso seria se o numero fosse encontrado na posição 0
+  Portanto, a melhor complexidade de caso é O(1)
+
+ No pior caso, a chave pode estar presente no último índice
+  Portanto, a complexidade do pior caso é O(N), onde N é o tamanho da lista
+	
+=end
+
+=begin
+                                   Explicação do código
  O método "each" vai passar por todos os elementos do array, ou seja, intera por todos os
  elementos do array
 
