@@ -26,68 +26,44 @@
  Visto essa explicação preciso criar esse algorítimo em Ruby
 =end
  
- def pequisa_binaria(array, valor)
-  
+def pequisa_binaria(array, valor)
+
   indice_baixo = 0
-  indice_alto = array.length -1
+  indice_alto = array.length - 1
 
- end
+  while indice_baixo <= indice_alto
+    indice_meio = (indice_baixo + indice_alto) / 2
+
+    if array[indice_meio] == valor
+      return indice_meio
+    elsif array[indice_meio] < valor
+      indice_baixo + 1
+    else
+      indice_alto = indice_baixo + 1
+    end
+  end
+end
  
- array = [10, 20, 30, 50, 60, 80, 110, 130, 140, 170]
- valor = 110
+array = [10, 20, 30, 50, 60, 80, 110, 130, 140, 170]
+valor = 110
 
- indice = pequisa_binaria(array, valor)
+indice_do_valor = pequisa_binaria(array, valor)
 
 =begin
 
  Primeiro criei o array com os valores ordenados
  Segundo criei a variável valor, carregando o valor que vai ser procurado dentro do array
- 
+
  Para processar preciso criei uma função chamada pesquisa binária
- 
+  Dentro dela declarei a variável indice_baixo que recebe o valor inicial do array
+	outra variável chamada indice_alto que recebe o tamanho total do array(é sempre -1 porque o
+	array começa no indice 0)
+
+	Crie um loop
 
 
-              Forma correta do código pela convenção usando next ao invés de if
 
-=end
 
-array2 = [10, 20, 80, 30, 60, 50, 110, 100, 130, 170]
-
-output = 110
-encontrado = false
-
-array2.each.with_index do |elemento, indice|
-  next unless output == elemento
-
-  puts "O numero #{output} está no indice #{indice}"
-  encontrado = true
-  break
-end
-
-puts "O numero #{output} não esta neste array" unless encontrado
-
-output = 175
-encontrado = false
-
-array2.each_with_index do |elemento, indice|
-  next unless output == elemento
-
-  puts "O numero #{output} esta no indice #{indice}"
-  encontrado = true
-  break
-end
-
-puts "O numero #{output} não foi encontrado" unless encontrado
-
-=begin
-
-Neste exemplo usei condicional simples de uma linha
-ele vai imprimir a mensagem se não for verdadeira a condição
-
-unless é ao contrario, por padrão a variável boolean vem como true, neste caso o unless
-diz que é falsa a variável
-
-então se encontrado for false, ou seja, não for encontrado o numero da busca vai imprimir
-na tela mensagem
+ E uma variável para receber essa função
 
 =end
