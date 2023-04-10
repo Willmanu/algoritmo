@@ -22,60 +22,30 @@
  Portanto, um algoritmo com complexidade O(Long n) é considerado muito eficiente para grandes
  conjuntos de dados, especialmente quando comparado com algoritmos com complexidade O(n) ou
  superior.
-
+ 
+ Visto essa explicação preciso criar esse algorítimo em Ruby
 =end
+ 
+ def pequisa_binaria(array, valor)
+  
+  indice_baixo = 0
+  indice_alto = array.length -1
 
-array = [10, 20, 30, 50, 60, 80, 110, 130, 140, 170]
+ end
+ 
+ array = [10, 20, 30, 50, 60, 80, 110, 130, 140, 170]
+ valor = 110
 
-primeiro_elemento = 0
-ultimo_elemento = 10
-elemento_do_meio = 80
-output = 110
-encontrado = false
-
-array.each_with_index do |elemento, indice|
-  if output == elemento
-    puts "O numero #{output} está na posição #{indice}"
-    encontrado = true
-    break
-  end
-end
-
-if encontrado == false
-  puts "O numero #{output} não foi encontrado"
-end
-
-# teste de numero que não esta entre os elementos do array
-output = 175
-encontrado = false
-array.each_with_index do |elemento, indice|
-  if output == elemento
-    puts "O numero #{output} está na posição #{indice}"
-    encontrado = true
-    break
-  end
-end
-
-if encontrado == false
-  puts "O numero #{output} não foi encontrado"
-end
+ indice = pequisa_binaria(array, valor)
 
 =begin
 
- O método each vai passar por todos os elementos do array, ou seja, intera por todos os
- elementos do array
+ Primeiro criei o array com os valores ordenados
+ Segundo criei a variável valor, carregando o valor que vai ser procurado dentro do array
+ 
+ Para processar preciso criei uma função chamada pesquisa binária
+ 
 
- elemento é a variável que recebe cada numero do array
-
- with index significa -> com indice - isso significa que a cada interação, os indices de cada numero
- vão ficar na variável indice
-
- Dentro do if tem uma logica que a seguinte:
- Como o each vai passar por cada número do array e guardar dentro da variável elemento
- se o numero de saída, ou seja, o numero que se deseja ser encontrado for igual ao elemento
- vai ser impresso uma mensagem
- o break interrompe a interação do each, porque o each passa por todos os números do array se não houver
- o break, mesmo que tenha achado o numero desejado
 
               Forma correta do código pela convenção usando next ao invés de if
 
