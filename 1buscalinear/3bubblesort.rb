@@ -30,7 +30,38 @@
 
 =end
 
+def bobble_sort(array)
+  length_array = array.length
+  loop do
+    swapped = false
+    (length_array - 1).times do |i|
+      if array[i] > array[i + 1]
+        array[i], array[i + 1] = array[i + 1], array[i]
+        swapped = true
+      end
+    end
+    break if not swapped
+  end
+  return array
+end
+
 array = [6, 3, 0, 5]
+puts bobble_sort(array)
+
+=begin
+  
+ Na primeira parte deste código declarei   o array com os valores embaralhados
+ Logo após pedi para imprimir na tela o array ordenado. Nesta impressão citei o nome "bobble_sort"
+ que é o nome da função que vai fazer a ordenação
+
+ Dentro da função ou método, tenho uma variável "length_array" que recebe o tamanho do array
+
+ Após isso abro a estrutura do laço e declaro uma variável chamada swapped(trocado) do tipo
+ boolean que vai me confirmar se foi trocado ou não quando o código andar
+ 
+ Abaixo tenho o método .times que vai rodar o loop do tamanho do array
 
 
-puts array
+
+
+=end
