@@ -81,6 +81,8 @@ end
 	muda sua posição mais uma afrente e o indice_baixo que era zero agora tem o indice do meio
 	mais um
 
+	E a ultima condicional 
+
 
 
 
