@@ -25,7 +25,7 @@
  
  Visto essa explicação preciso criar esse algorítimo em Ruby
 =end
- 
+
 def pequisa_binaria(array, valor)
 
   indice_baixo = 0
@@ -37,17 +37,24 @@ def pequisa_binaria(array, valor)
     if array[indice_meio] == valor
       return indice_meio
     elsif array[indice_meio] < valor
-      indice_baixo + 1
+      indice_baixo = indice_meio + 1
     else
-      indice_alto = indice_baixo + 1
+      indice_alto = indice_meio + 1
     end
   end
+  return nil
 end
- 
+
 array = [10, 20, 30, 50, 60, 80, 110, 130, 140, 170]
 valor = 110
 
 indice_do_valor = pequisa_binaria(array, valor)
+
+if indice_do_valor
+	puts "O valor #{valor} foi encontrado no indice #{indice_do_valor} do array"
+else
+	puts "O valor #{valor} não foi encontrado"
+end
 
 =begin
 
@@ -59,7 +66,20 @@ indice_do_valor = pequisa_binaria(array, valor)
 	outra variável chamada indice_alto que recebe o tamanho total do array(é sempre -1 porque o
 	array começa no indice 0)
 
-	Crie um loop
+	Crie um loop que cria uma ação: se o indice_baixo é menor ou igual o indice_alto. Com isso
+	percorro o array porque quando o loop voltar o indice baixo vai estar em outra posição
+
+	Após isso na linha abaixo caso o indice_baixo seja menor, tenho um cálculo
+	que gera o indice do meio do array, e assim tenho acesso ao meio do array
+
+  Dentro da condicional do array, verifico se o valor que esta na posição do meio do array é
+  igual ao valor que desejo ver no array. Se for este indice retorna para fora do método levando
+  este indice
+
+   Se esta condição acima não for atendida então verifico se o mesmo valor do indice_meio é menor
+	que o valor que desejo encontrar no array, Sendo menor o indice_meio recebe mais um, e assim
+	muda sua posição mais uma afrente e o indice_baixo que era zero agora tem o indice do meio
+	mais um
 
 
 
