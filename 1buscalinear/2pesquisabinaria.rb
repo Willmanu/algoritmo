@@ -39,7 +39,7 @@ def pequisa_binaria(array, valor)
     elsif array[indice_meio] < valor
       indice_baixo = indice_meio + 1
     else
-      indice_alto = indice_meio + 1
+      indice_alto = indice_meio - 1
     end
   end
   return nil
@@ -51,9 +51,9 @@ valor = 110
 indice_do_valor = pequisa_binaria(array, valor)
 
 if indice_do_valor
-	puts "O valor #{valor} foi encontrado no indice #{indice_do_valor} do array"
+  puts "O valor #{valor} foi encontrado no indice #{indice_do_valor} do array"
 else
-	puts "O valor #{valor} não foi encontrado"
+  puts "O valor #{valor} não foi encontrado"
 end
 
 =begin
@@ -61,7 +61,7 @@ end
  Primeiro criei o array com os valores ordenados
  Segundo criei a variável valor, carregando o valor que vai ser procurado dentro do array
 
- Para processar preciso criei uma função chamada pesquisa binária
+ Para processar criei uma função chamada pesquisa binária
   Dentro dela declarei a variável indice_baixo que recebe o valor inicial do array
 	outra variável chamada indice_alto que recebe o tamanho total do array(é sempre -1 porque o
 	array começa no indice 0)
@@ -79,13 +79,17 @@ end
    Se esta condição acima não for atendida então verifico se o mesmo valor do indice_meio é menor
 	que o valor que desejo encontrar no array, Sendo menor o indice_meio recebe mais um, e assim
 	muda sua posição mais uma afrente e o indice_baixo que era zero agora tem o indice do meio
-	mais um
+	mais um, ou seja ira para a proxima posição do array para verificar esse proximo valor com o
+	valor desejado
 
-	E a ultima condicional 
-
-
-
-
- E uma variável para receber essa função
-
+	Na próxima linha a condicional vai entrar na proxima linha se o valor do indice_meio for maior que o valor
+    desejado. Sendo assim o indice_alto vai receber o indice do meio menos 1, ou seja o
+	indice_alto que representa o tamanho do array diminui fazendo com que a proxima busca seja do
+	lado esquerdo do array e vai continuar assim até que o valor desejada seja encontrado
+		Agora temos o lado esquerdo do array sendo explorado
+  
+	Para finalizar aqui fora da função, tenho a variável chamada indice_do_valor que recebe o
+	retorno do método com o indice do valor desejado e duas condicionais:
+		uma que se achar o valor no array imprimi uma mensagem na tela avisando em qual indice
+		estava e outra caso o valor desejado não esteja no array
 =end
