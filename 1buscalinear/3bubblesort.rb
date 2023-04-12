@@ -40,9 +40,8 @@ def bobble_sort(array)
         swapped = true
       end
     end
-    break if not swapped
+    break unless swapped
   end
-  return array
 end
 
 array = [6, 3, 0, 5]
@@ -58,9 +57,37 @@ puts bobble_sort(array)
 
  Após isso abro a estrutura do laço e declaro uma variável chamada swapped(trocado) do tipo
  boolean que vai me confirmar se foi trocado ou não quando o código andar
- 
- Abaixo tenho o método .times que vai rodar o loop do tamanho do array
 
+ Abaixo tenho o método .times que vai rodar o loop do tamanho do array, porque a sua frente
+ escrevi a variável que carrega este tamanho com o -1, porque o método time começa a partir da
+ posição 0, e o length informa o tamanho partindo do 1. Se não for assim o método time quando
+ ler o ultimo número do length para comparação, vou ter uma comparação em nil(vazia)
+
+ Na condicional, primeiro começa verificando se o valor do array na posição 0
+ (que no caso é o 6) é maior que o array na posição 1 (que é o 3).
+ Pois array[i + 1] é a posição 0(i) quando mais 1 temos a posição 1 pela soma
+ 
+                                            A troca
+ Se a posição 0 for maior que a 1 na outra linha temos:
+
+    array[i], array[i + 1] = array[i + 1], array[i]
+
+ a posição 0(array [i]) recebe e a posição 1(array[i + 1])
+ 
+ e a posição 1(array[i + 1]) recebe a posição 0(array[i])
+
+ ou seja o 6 vai ficar no lugar do 3
+
+ E assim o loop vai seguir para verificar se a posição 1 é maior que a 2, e se for, faz a
+ troca e segue para verificar se a posição 2 é maior que a 3 etc
+
+ Toda vez que faz a troca a variável swapped recebe uma confirmação que isso foi feito, assim
+ quando o loop acabar de percorrer o array vai ler o break unless swapped
+
+ break é para o loop
+ porém ele só vai parar(porque essa estrutura de loop não para, ou seja, faz novamente 
+ mesma coisa) se a variável swapped tiver false, ou seja. não ter feito mais nenhuma troca
+ Enquanto o if afirma positivamente o unless afirma ao contrario
 
 
 
