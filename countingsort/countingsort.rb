@@ -38,12 +38,8 @@
  Elemento de entrada é a quantidade de elementos na lista ou array
  Faixa de valor de entrada é o "intervalo" de valor entre um elemento e o outro
 
-
-
-
-
- Ele funciona contando o número de objetos com valores de chave distintos (uma espécie de
- hashing)
-
+ Exemplo de código:
 
 =end
+
+array = [1, 4, 1, 2, 7, 5, 2]
