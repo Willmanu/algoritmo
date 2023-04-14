@@ -42,6 +42,7 @@ def bobble_sort(array)
     end
     break unless swapped
   end
+  array
 end
 
 array = [6, 3, 0, 5]
@@ -90,7 +91,20 @@ puts bobble_sort(array)
  Enquanto o if afirma positivamente o unless afirma ao contrario, dizendo que se for false
 
  Então se swapped tiver false significa que o código ja fez todas as trocas e não recebeu true
- o break então para o loop e a função retorna para o método puts e mostra na tela o array
- ordenado
+ o break então para o loop
+ 
+ Saindo do loop tenho a palavra array que é a palavra de returno para sair do método
+	Deveria estar escrito "return array" porém em Ruby é redundante escrever a palavra return
+	por isso ficou somente o array indicando esse returno
+ Assim sai do método e tenho o retorno do array dentro do método puts para imprimir na tela
+
+                                              Método .sort
+
+ Ao invés de fazer todas essas linhas de código, posso simplesmente usar o método .sort que faz
+ a mesma coisa, ou seja, ordena um array.
+ Exemplo:
 
 =end
+
+array2 = [6, 3, 0, 5]
+puts array2.sort
