@@ -38,9 +38,30 @@
  Elemento de entrada é a quantidade de elementos na lista ou array
  Faixa de valor de entrada é o "intervalo" de valor entre um elemento e o outro
 
+ O output deve ser o array ordenado e sem números repetidos
  Exemplo de código:
 
 =end
 
+def counting_sort
+ 
+ cont_array = New.array(array.size, 0)
+end
+
 array = [1, 4, 1, 2, 7, 5, 2]
-puts array.sort
+sorted_array = counting_sort(array)
+puts sorted_array
+
+=begin
+ 1º defini o array com os elementos
+ 2º defini a variável "sorted_array" que vai receber o array ordenado após passar pelo método de
+ ordenação
+ 3º defini o método puts para imprimir na tela o array ordenado que vai estar dentro da variável
+ sorted_array
+
+                                        O método counting_sort
+ O método começa com uma variável chamada  cont_array que recebe um novo array do mesmo tamanho do 1º array
+	Para definir que este novo array tenha o mesmo tamanho do 1º, usei o método .size que retorna o tamanho
+	do array a sua frente, array que é o 1º e inicializa a contagem 
+
+=end
