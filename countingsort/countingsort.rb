@@ -148,11 +148,28 @@ puts sorted_array
  Agora o elemento = 2, 2 -1= 1, ou seja count_array[1]
  neste indice o valor é 1 e 1 +=1 = 2, ou seja, neste indice 1 o valor será 2
 
-     indices 0, 1, 2, 3, 4, 5, 6
- count_array[2, 2, 0, 1, 1, 0, 1]
+ Com isso temos 2 array
+ De entrada array[1, 4, 1, 2, 7, 5, 2] e o array auxiliar count_array[2, 2, 0, 1, 1, 0, 1]
+
+ O count_array serve para armazenar as ocorrências de quantas vezes os números do "array de entrada"
+ apareceram no array
+ O array de entrada tem 7 elementos então sabemos que se renge de números começa no 1 e vai até o 7
+ Dentre os números que podem aparacer nesse range é do 1 ao 7
+	Exemplo de possíveis números que podem aparecer:
+	1, 2, 3, 4, 5, 6, e 7
+
+ Quando olho para o array auxiliar de ocorrência count_arr[2, 2, 0, 1, 1, 0, 1] ele me diz que:
+   o numero 1 do range aparaceu 2 vezes
+   o numero 2 do renge aparaceu 2 vezes
+   o numero 3 do range não apareceu
+   o numero 4 do range apareceu 1 vez
+   o numero 5 do range apareceu 1 vez
+   o numero 6 do range não apareceu
+   o numero 7 do range aparaceu 1 vez
+ É para isso que o array de ocorrência serve, mostrar quantas vezes os números do range do array de
+ entrada aparaceram
 
 
 
 
- 
 =end
