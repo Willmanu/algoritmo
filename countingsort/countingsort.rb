@@ -44,8 +44,18 @@
 =end
 
 def counting_sort
- 
- cont_array = New.array(array.size, 0)
+ # variáveis que guarda o menor e maior elemento do array
+ minimum_number = array.min
+ maximum_number = array.max
+
+ # Array novo que vai contar os intervalos
+ cont_array = New.array(maximum_number - minimum_number + 1, 0)
+
+ # Verifica quantas vezes cada elemento do array aparece 
+ array.each do |elemento|
+  cont_array[elemento - minimum_number] += 1
+ end
+
 end
 
 array = [1, 4, 1, 2, 7, 5, 2]
@@ -60,8 +70,48 @@ puts sorted_array
  sorted_array
 
                                         O método counting_sort
- O método começa com uma variável chamada  cont_array que recebe um novo array do mesmo tamanho do 1º array
-	Para definir que este novo array tenha o mesmo tamanho do 1º, usei o método .size que retorna o tamanho
-	do array a sua frente, array que é o 1º e inicializa a contagem 
+ O método começa com duas variáveis chamada:
+ minimum_number que guarda o menor elemento do array, com o método .min
+ maximum_number que guarda o maior elemento do array, com o método .max
 
+ Após isso tem a variável "cont_array" que recebe um novo array
+  Este novo arrai vai contar os intervalos dos elementos
+
+ Isso "cont_array[elemento - minimum_number]" += 1 é:
+ o método .each vai passar por todos os elemento do array e guardar temporariamente cada elemento
+ na variável elemento
+
+                                  1º passado do .each
+ então na primeira passada temos:
+	"elemento é 1" - "minimum_number que é 1", ou seja, 1 - 1 = 0 
+ Isso indica a posição do array neste momento que a posição 0
+ é o mesmo que escrever cont_array[0], isso indica o elemento 1 que esta na posição 0 do array
+ 
+ Então o elemento que é 1 soma mais um, ou seja, cont_array[0] -> que é 1 + 1 que é = 2
+ Neste momento a posição 0 do cont_array é o elemento 2 -> cont_array[2]
+
+                                 2º passada do .each
+ Na proxima passada temos elemento = 4 - minimum_number que é 1, ou seja, 4 - 1 = 3
+ é o mesmo que escrever cont_array[3], isso indica o elemento 2 que esta na posição 3 do array
+
+ Então o elemento que é 2 soma mais um, ou seja, cont_array[3] -> que é 2 + 1 que é = 3
+ Neste momento a posição 3 do cont_array é o elemento 2 -> cont_array[2, 2] foram preenchidas
+ duas posição do novo array posição 0 e posição 1
+
+
+	                              3º passado do .each
+ 
+ Na proxima passada temos elemento = 1 - minimum_number que é 1, ou seja, 1 - 1 = 0
+ ou seja, cont_array[0] += 1
+ Count_array[0] é 1 +1 = 2
+
+
+
+
+
+
+ array = [1, 4, 1, 2, 7, 5, 2]
+    array.each do |elemento|
+      cont_array[elemento - minimum_number] += 1
+    end
 =end
